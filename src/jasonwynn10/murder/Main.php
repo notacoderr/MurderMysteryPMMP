@@ -14,7 +14,6 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\tile\Sign;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
-use spoondetector\SpoonDetector;
 
 class Main extends PluginBase {
 	/** @var BaseLang $baseLang */
@@ -36,7 +35,6 @@ class Main extends PluginBase {
 	}
 
 	public function onEnable() {
-		SpoonDetector::printSpoon($this, "spoon.txt");
 		$this->saveDefaultConfig();
 		/** @var string $lang */
 		$lang = $this->getConfig()->get("language", BaseLang::FALLBACK_LANGUAGE);
